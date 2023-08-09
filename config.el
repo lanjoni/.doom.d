@@ -5,6 +5,7 @@
 
 ;;
 ;;; UI
+(setq fancy-splash-image "~/.doom.d/splash.png")
 
 (setq doom-theme 'acme
       doom-font (font-spec :family "Monaco" :size 14)
@@ -75,6 +76,10 @@
 (global-company-mode t)
 (auto-complete-mode t)
 
+;; Open cider
+(global-set-key (kbd "C-c M-j") 'cider-jack-in)
+
+;; Crystalline configuration
 (with-eval-after-load 'lsp-mode
   (add-to-list 'lsp-language-id-configuration
                '(crystal-mode . "crystal"))
